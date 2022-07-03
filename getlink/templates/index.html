@@ -37,9 +37,21 @@
         </div>
         <div class="row">
             <div class="col-8 offset-md-2">
+                <label for="" style="text-align: center; width: 100%;">File PSD, PPTX hoặc JPG</label>
                 <div class="col-12 input-group">
-                    <label for="fs-link" class="input-group-addon"><a id="openlink" href="{{link}}"><i class="fa fa-external-link" aria-hidden="true"></i></a></label>
+                    <label for="fs-link" class="input-group-addon"><a id="openlink" href="{{link}}" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></label>
                     <input style="background-color:#F8F8F8;" class="form-control text-center" id="derect-link" value="{{link}}" type="text" readonly="">
+                    <button id="buttontext" onclick="selectText()" type="button" class="btn btn-success">Copy</button>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col-8 offset-md-2">
+                <label for="" style="text-align: center; width: 100%;">Nếu link bạn nhập có 2 sự lựa chọn thì Link download bên trên là file PNG hoặc JPG. Còn bên dưới sẽ là file PSD,AI,...</label>
+                <div class="col-12 input-group">
+                    <label for="fs-link" class="input-group-addon"><a id="openlink" href="{{psd_content}}" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></label>
+                    <input style="background-color:#F8F8F8;" class="form-control text-center" id="derect-link" value="{{psd_content}}" type="text" readonly="">
                     <button id="buttontext" onclick="selectText()" type="button" class="btn btn-success">Copy</button>
                 </div>
             </div>
@@ -48,7 +60,7 @@
         
         <br/>
         <div class="alert alert-info text-center" role="alert">
-            Chỉ get link Lovepik và chưa hỗ trợ file Video <br/> Giờ server hoạt động: 9h - 24h (Có thể sớm hoặc trễ hơn)<br/> URL này không cố định. Mỗi ngày mấy bạn vào <a href="https://tailieusharefree.blogspot.com/2022/06/get-link-lovepik-tu-dong.html">Bài viết</a> để lấy link nhé.
+            Chỉ get link Lovepik và chưa hỗ trợ file Video <br/> Giờ server hoạt động: 9h - 24h (Có thể sớm hoặc trễ hơn)<br/> URL này không cố định. Mỗi ngày mấy bạn vào <a href="https://tailieusharefree.blogspot.com/">Trang chủ</a> => Tiện ích => Get link Lovepik để lấy link nhé.
             
         </div>
         <br/>
