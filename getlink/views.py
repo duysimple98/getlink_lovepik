@@ -11,7 +11,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
-import tkinter as tk
+# import tkinter as tk
 from selenium.webdriver.common.by import By
 from .forms import SearchForm
 import time
