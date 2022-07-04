@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Getlink Lovepik by BKH</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='//blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgtB69SscXKyMdp--7D2ENmMnzGcepfA3pCZ_LLB_mEd1_JOLpmcvwupVEg_Nyq8q41LlpHCQVGKf_GUg6Q6N6hteB-qwYTT4P2xVzRlKqsn4ZGdkRyUhYR6Ctrrq1JRTkz6WfYYu3Oq27xvyHH8QRXzY_KT8km4xy0pFwq1haoU1h3HnnvFluV9paz/s1600/AppIcon.ico' rel='icon' type='image/x-icon'/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-8 offset-md-2">
+                <div style="padding-top: 30px; text-align: center;">
+                    <img src="https://dl.dropboxusercontent.com/s/rokmto8khdtty0y/logo.png" style="width:30%">
+                 </div>
+                <form name="form-get-link" id="form-get-link" style="padding-top: 50px;" method="post">
+                    <div class="form-group row">
+                        <div class="col-10 input-group">
+                            <label for="fs-link" class="input-group-addon">LINK CẦN GET: </label>
+                            {% csrf_token %}
+                            {{ form }}
+                            <!-- <input class="form-control" type="text" value="" id="link"> -->
+                        </div>
+                        <div class="col-2">
+                            <button id="btn-getlink" type="submit" class="btn btn-secondary"
+                                    data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Đang tải...">GET LINK</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8 offset-md-2">
+                <label for="" style="text-align: center; width: 100%;">File PSD, PPTX hoặc JPG</label>
+                <div class="col-12 input-group">
+                    <label for="fs-link" class="input-group-addon"><a id="openlink" href="{{link}}" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></label>
+                    <input style="background-color:#F8F8F8;" class="form-control text-center" id="derect-link" value="{{link}}" type="text" readonly="">
+                    <button id="buttontext" onclick="selectText()" type="button" class="btn btn-success">Copy</button>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col-8 offset-md-2">
+                <label for="" style="text-align: center; width: 100%;">Nếu link bạn nhập có 2 sự lựa chọn thì Link download bên trên là file PNG hoặc JPG. Còn bên dưới sẽ là file PSD,AI,...</label>
+                <div class="col-12 input-group">
+                    <label for="fs-link" class="input-group-addon"><a id="openlink" href="{{psd_content}}" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></label>
+                    <input style="background-color:#F8F8F8;" class="form-control text-center" id="derect-link" value="{{psd_content}}" type="text" readonly="">
+                    <button id="buttontext" onclick="selectText()" type="button" class="btn btn-success">Copy</button>
+                </div>
+            </div>
+        </div>
+        
+        
+        <br/>
+        <div class="alert alert-info text-center" role="alert">
+            Chỉ get link Lovepik và chưa hỗ trợ file Video <br/> Giờ server hoạt động: 9h - 24h (Có thể sớm hoặc trễ hơn)<br/> URL này không cố định. Mỗi ngày mấy bạn vào <a href="https://tailieusharefree.blogspot.com/">Trang chủ</a> => Tiện ích => Get link Lovepik để lấy link nhé.
+            
+        </div>
+        <br/>
+		<p style="text-align:center; font-size:20px">Thiết kế bởi <a href="https://tailieusharefree.blogspot.com/" target="_blank">BKH</a> - tailieusharefree.blogspot.com</p>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('#btn-getlink').click(function(){
+                $('#btn-getlink').button('loading');
+                $('#derect-link').val('Đang get link... Đợi chút nhé ^^');
+            });
+        });
+        function selectText() {
+            var input = document.getElementById('derect-link');
+            input.select();
+            input.setSelectionRange(0,9999);
+            document.execCommand('copy');
+            document.getElementById("buttontext").innerHTML="Đã copy"
+        }
+    </script>
+</body>
+</html>
