@@ -151,15 +151,7 @@ def get_name(request):
                         print("Không tìm thấy bất kỳ phần tử nào")
                         content = "Link bạn nhập sai yêu cầu. Vui lòng kiểm tra lại."
                         return render(request, "index.html", {'form': form, 'link': content})
-                        # try:
-                        #     video = driver.find_element(By.XPATH, '//div[@class="limit_down"]')
-                        #     if video.is_displayed():
-                        #         video_content = driver.find_element(By.XPATH, '//a[@class="down_t"]').get_attribute("value")
-                        #         print("Giá trị video là: ", video_content)
-                        # except NoSuchElementException:
-                        #     print("Không tìm thấy bất kỳ phần tử nào")
-                        #     content = "Link bạn nhập sai yêu cầu. Vui lòng kiểm tra lại."
-                        #     return render(request, "index.html", {'form': form, 'link': content})
+
             time.sleep(2)
 
 
