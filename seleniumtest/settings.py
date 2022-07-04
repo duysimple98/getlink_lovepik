@@ -26,7 +26,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["getlinklovepik.herokuapp.com", "localhost"]
+ALLOWED_HOSTS = ["getlovepik.herokuapp.com", "localhost"]
 
 
 # Application definition
