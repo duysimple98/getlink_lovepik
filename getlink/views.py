@@ -11,7 +11,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
-# import tkinter as tk
 from selenium.webdriver.common.by import By
 from .forms import SearchForm
 import time
@@ -186,8 +185,6 @@ def get_name(request):
             content = driver.find_element(
                 By.XPATH, '//input[@class="copy-ipt link"]').get_attribute("value")
 
-            # root = tk.Tk()
-            # copied = root.clipboard_get()
 
             print("Link download là: ", content)
 
